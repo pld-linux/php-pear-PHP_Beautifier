@@ -4,8 +4,8 @@
 %define		_status		devel
 %define		_pearname	%{_class}_%{_subclass}
 
-Summary:	%{_pearname} - Beautifier for PHP
-Summary(pl):	%{_pearname} - Upiêkszacz dla PHP
+Summary:	%{_pearname} - beautifier for PHP
+Summary(pl):	%{_pearname} - upiêkszacz dla PHP
 Name:		php-pear-%{_pearname}
 Version:	0.0.7
 Release:	1
@@ -20,7 +20,8 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This program reformat and beautify PHP source code files automatically.
+This program reformat and beautify PHP source code files
+automatically.
 
 In PEAR status of this package is: %{_status}.
 
