@@ -1,7 +1,7 @@
-diff -burN php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier/Batch/Output/DirectoryBz2.php php-pear-PHP_Beautifier-0.0.9/PHP_Beautifier-0.0.9/Beautifier/Batch/Output/DirectoryBz2.php
---- php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier/Batch/Output/DirectoryBz2.php	2004-12-05 12:13:30.436060952 +0100
-+++ php-pear-PHP_Beautifier-0.0.9/PHP_Beautifier-0.0.9/Beautifier/Batch/Output/DirectoryBz2.php	2004-12-05 12:22:11.407861200 +0100
-@@ -26,7 +26,7 @@
+diff -burN a.orig/b/Beautifier/Batch/Output/DirectoryBz2.php a/b/Beautifier/Batch/Output/DirectoryBz2.php
+--- a.orig/b/Beautifier/Batch/Output/DirectoryBz2.php	2005-02-07 09:17:43.047075360 +0100
++++ a/b/Beautifier/Batch/Output/DirectoryBz2.php	2005-02-07 09:18:31.882651224 +0100
+@@ -23,7 +23,7 @@
      /**
      * Include PHP_Beautifier_Batch_DirectoryTar
      */    
@@ -9,11 +9,11 @@ diff -burN php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier/Ba
 +    require_once ('PHP/Beautifier/Batch/Output/DirectoryTar.php');
      /**
      * PHP_Beautifier_Batch_FilesGz
-     * Handle the batch process for multiple php files to one directory.
-diff -burN php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier/Batch/Output/DirectoryGz.php php-pear-PHP_Beautifier-0.0.9/PHP_Beautifier-0.0.9/Beautifier/Batch/Output/DirectoryGz.php
---- php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier/Batch/Output/DirectoryGz.php	2004-12-05 12:13:30.437060800 +0100
-+++ php-pear-PHP_Beautifier-0.0.9/PHP_Beautifier-0.0.9/Beautifier/Batch/Output/DirectoryGz.php	2004-12-05 12:22:27.911352288 +0100
-@@ -26,7 +26,7 @@
+     *
+diff -burN a.orig/b/Beautifier/Batch/Output/DirectoryGz.php a/b/Beautifier/Batch/Output/DirectoryGz.php
+--- a.orig/b/Beautifier/Batch/Output/DirectoryGz.php	2005-02-07 09:17:43.047075360 +0100
++++ a/b/Beautifier/Batch/Output/DirectoryGz.php	2005-02-07 09:19:00.361321808 +0100
+@@ -23,7 +23,7 @@
      /**
      * Include PHP_Beautifier_Batch_DirectoryTar
      */    
@@ -21,49 +21,52 @@ diff -burN php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier/Ba
 +    require_once ('PHP/Beautifier/Batch/Output/DirectoryTar.php');
      /**
      * PHP_Beautifier_Batch_FilesGz
-     * Handle the batch process for multiple php files to one directory.
-diff -burN php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier/Batch/Output/FilesBz2.php php-pear-PHP_Beautifier-0.0.9/PHP_Beautifier-0.0.9/Beautifier/Batch/Output/FilesBz2.php
---- php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier/Batch/Output/FilesBz2.php	2004-12-05 12:13:30.438060648 +0100
-+++ php-pear-PHP_Beautifier-0.0.9/PHP_Beautifier-0.0.9/Beautifier/Batch/Output/FilesBz2.php	2004-12-05 12:23:15.008192480 +0100
-@@ -26,7 +26,7 @@
+     *
+diff -burN a.orig/b/Beautifier/Batch/Output/FilesBz2.php a/b/Beautifier/Batch/Output/FilesBz2.php
+--- a.orig/b/Beautifier/Batch/Output/FilesBz2.php	2005-02-07 09:17:43.048075208 +0100
++++ a/b/Beautifier/Batch/Output/FilesBz2.php	2005-02-07 09:19:31.575576520 +0100
+@@ -23,7 +23,7 @@
      /**
      * Include PHP_Beautifier_Batch_FilesGz
      */    
 -    require_once 'FilesTar.php';
 +    require_once 'PHP/Beautifier/Batch/Output/FilesTar.php';
      /**
-     * PHP_Beautifier_Batch_FilesBz2
      * Handle the batch process for one/multiple php files to one tar bzip2 file
-diff -burN php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier/Batch/Output/FilesGz.php php-pear-PHP_Beautifier-0.0.9/PHP_Beautifier-0.0.9/Beautifier/Batch/Output/FilesGz.php
---- php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier/Batch/Output/FilesGz.php	2004-12-05 12:13:30.438060648 +0100
-+++ php-pear-PHP_Beautifier-0.0.9/PHP_Beautifier-0.0.9/Beautifier/Batch/Output/FilesGz.php	2004-12-05 12:23:45.060623816 +0100
-@@ -26,7 +26,7 @@
+     *
+diff -burN a.orig/b/Beautifier/Batch/Output/FilesGz.php a/b/Beautifier/Batch/Output/FilesGz.php
+--- a.orig/b/Beautifier/Batch/Output/FilesGz.php	2005-02-07 09:17:43.048075208 +0100
++++ a/b/Beautifier/Batch/Output/FilesGz.php	2005-02-07 09:19:46.708276000 +0100
+@@ -23,7 +23,7 @@
      /**
-     * Require FilesTar
-     */
--    include_once 'FilesTar.php';    
-+    include_once 'PHP/Beautifier/Batch/Output/FilesTar.php';    
+     * Include PHP_Beautifier_Batch_FilesGz
+     */    
+-    require_once 'FilesTar.php';
++    require_once 'PHP/Beautifier/Batch/Output/FilesTar.php';
      /**
-     * PHP_Beautifier_Batch_FilesGz
-     * Handle the batch process for one/multiple php files to one tar gzipped file
-diff -burN php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier/Batch.php php-pear-PHP_Beautifier-0.0.9/PHP_Beautifier-0.0.9/Beautifier/Batch.php
---- php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier/Batch.php	2004-12-05 12:13:30.447059280 +0100
-+++ php-pear-PHP_Beautifier-0.0.9/PHP_Beautifier-0.0.9/Beautifier/Batch.php	2004-12-05 12:19:20.555834656 +0100
-@@ -28,8 +28,8 @@
+     * Handle the batch process for one/multiple php files to one tar gzip file
+     *
+diff -burN a.orig/b/Beautifier/Batch.php a/b/Beautifier/Batch.php
+--- a.orig/b/Beautifier/Batch.php	2005-02-07 09:17:43.051074752 +0100
++++ a/b/Beautifier/Batch.php	2005-02-07 09:20:45.298368952 +0100
+@@ -23,11 +23,11 @@
      /**
      * Require PHP_Beautifier_Decorator
      */
 -    require_once ('Decorator.php');
--    require_once ('Batch/Output.php');
 +    require_once ('PHP/Beautifier/Decorator.php');
+     /**
+     * Require PHP_Beautifier_Batch_Output
+     */
+-    require_once ('Batch/Output.php');
 +    require_once ('PHP/Beautifier/Batch/Output.php');
      // ArrayNested->off();
      // ArrayNested->on();
      
-diff -burN php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier/StreamWrapper.php php-pear-PHP_Beautifier-0.0.9/PHP_Beautifier-0.0.9/Beautifier/StreamWrapper.php
---- php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier/StreamWrapper.php	2004-12-05 12:13:30.455058064 +0100
-+++ php-pear-PHP_Beautifier-0.0.9/PHP_Beautifier-0.0.9/Beautifier/StreamWrapper.php	2004-12-05 12:19:20.557834352 +0100
-@@ -42,5 +42,5 @@
+diff -burN a.orig/b/Beautifier/StreamWrapper.php a/b/Beautifier/StreamWrapper.php
+--- a.orig/b/Beautifier/StreamWrapper.php	2005-02-07 09:17:43.053074448 +0100
++++ a/b/Beautifier/StreamWrapper.php	2005-02-07 09:21:05.335322872 +0100
+@@ -51,5 +51,5 @@
          function dir_rewinddir();
          function dir_closedir();
      }
@@ -71,10 +74,10 @@ diff -burN php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier/St
 +    require_once('PHP/Beautifier/StreamWrapper/Tarz.php');
  ?>
 \ Brak znaku nowej linii na koñcu pliku
-diff -burN php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier.php php-pear-PHP_Beautifier-0.0.9/PHP_Beautifier-0.0.9/Beautifier.php
---- php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier.php	2004-12-05 12:13:30.397066880 +0100
-+++ php-pear-PHP_Beautifier-0.0.9/PHP_Beautifier-0.0.9/Beautifier.php	2004-12-05 12:19:20.560833896 +0100
-@@ -30,15 +30,15 @@
+diff -burN a.orig/b/Beautifier.php a/b/Beautifier.php
+--- a.orig/b/Beautifier.php	2005-02-07 09:17:43.023079008 +0100
++++ a/b/Beautifier.php	2005-02-07 09:21:35.220779592 +0100
+@@ -28,15 +28,15 @@
      /**
      * Require PHP_Beautifier_Filter
      */
@@ -93,7 +96,7 @@ diff -burN php-pear-PHP_Beautifier-0.0.9.orig/PHP_Beautifier-0.0.9/Beautifier.ph
      /**
      * Require Log
      */
-@@ -46,11 +46,11 @@
+@@ -44,11 +44,11 @@
      /**
      * Require Exceptions
      */
