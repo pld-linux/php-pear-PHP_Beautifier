@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          PHP
-%define         _subclass       Beautifier
+%define		_class		PHP
+%define		_subclass	Beautifier
 %define		_status		devel
 %define		_pearname	%{_class}_%{_subclass}
 
