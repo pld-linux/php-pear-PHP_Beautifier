@@ -15,7 +15,7 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	2afe690db97a1d20ba687536efdc8c01
 URL:		http://pear.php.net/package/PHP_Beautifier/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
-Requires:	php-pear
+Requires:	php-pear >= 3:5.0.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
