@@ -1,18 +1,18 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		PHP
 %define		_subclass	Beautifier
-%define		_status		devel
+%define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - beautifier for PHP
 Summary(pl):	%{_pearname} - upiêkszacz dla PHP
 Name:		php-pear-%{_pearname}
-Version:	0.1.2
+Version:	0.1.3
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	5a1651dfef74eb3b74e6d2dc5aa064d1
+# Source0-md5:	d95690eb4640c7b61f3d67ce534d833c
 Patch0:		%{name}-path_fix.patch
 URL:		http://pear.php.net/package/PHP_Beautifier/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
