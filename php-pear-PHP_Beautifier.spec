@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - Beautifier for PHP
 Summary(pl):	%{_pearname} - Upiêkszacz dla PHP
 Name:		php-pear-%{_pearname}
-Version:	0.0.6.1
+Version:	0.0.7
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	2afe690db97a1d20ba687536efdc8c01
+# Source0-md5:	91e747f234c67a6b82748258e148c12d
 URL:		http://pear.php.net/package/PHP_Beautifier/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear >= 3:5.0.0
