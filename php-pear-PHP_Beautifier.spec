@@ -8,15 +8,17 @@ Summary:	%{_pearname} - beautifier for PHP
 Summary(pl):	%{_pearname} - upiêkszacz dla PHP
 Name:		php-pear-%{_pearname}
 Version:	0.1.4
-Release:	1
+Release:	1.3
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	0d51b0036e6f61df1e80fd1335a41308
 Patch0:		%{name}-path_fix.patch
 URL:		http://pear.php.net/package/PHP_Beautifier/
-BuildRequires:	rpm-php-pearprov >= 4.0.2-98
-Requires:	php-pear >= 3:5.0.0
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+Requires:	php-pear >= 4:1.0-7
+Requires:	php-common >= 4:5.0.0
+Requires:	php-bzip2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,33 +34,43 @@ aplikacji napisanych w PHP.
 
 Ta klasa ma w PEAR status: %{_status}.
 
-%prep
-%setup -q -c
-cd %{_pearname}-%{version}
-%patch0 -p2
+%package tests
+Summary:	Tests for PEAR::%{_pearname}
+Summary(pl):	Testy dla PEAR::%{_pearname}
+Group:		Development
+Requires:	%{name} = %{version}-%{release}
 
-%build
-cd %{_pearname}-%{version}/scripts
-sed -i -e 's,"@php_bin@",/usr/bin/php,' php_beautifier
+%description tests
+Tests for PEAR::%{_pearname}.
+
+%description tests -l pl
+Testy dla PEAR::%{_pearname}.
+
+%prep
+%pear_package_setup
+cd ./%{php_pear_dir}/%{_class}
+%patch0 -p2
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{php_pear_dir}/%{_class}/%{_subclass}/{Batch/Output,Filter,StreamWrapper}}
-
-install %{_pearname}-%{version}/scripts/php_beautifier $RPM_BUILD_ROOT%{_bindir}
-install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-install %{_pearname}-%{version}/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
-install %{_pearname}-%{version}/%{_subclass}/Batch/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Batch
-install %{_pearname}-%{version}/%{_subclass}/Batch/Output/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Batch/Output
-install %{_pearname}-%{version}/%{_subclass}/Filter/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Filter
-install %{_pearname}-%{version}/%{_subclass}/StreamWrapper/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/StreamWrapper
+install -d $RPM_BUILD_ROOT{%{php_pear_dir},%{_bindir}}
+%pear_package_install
+cp -a ./%{_bindir}/* $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/{examples,licenses,tests}
+%doc install.log optional-packages.txt
+%doc docs/%{_pearname}/examples
+%{php_pear_dir}/.registry/*.reg
 %attr(755,root,root) %{_bindir}/php_beautifier
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}
+
+%{php_pear_dir}/data/%{_pearname}
+
+%files tests
+%defattr(644,root,root,755)
+%{php_pear_dir}/tests/*
