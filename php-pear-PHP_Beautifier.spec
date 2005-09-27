@@ -38,7 +38,7 @@ Ta klasa ma w PEAR status: %{_status}.
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl):	Testy dla PEAR::%{_pearname}
 Group:		Development
-Requires:	%{name} = %{epoch}:%{name}-%{release}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description tests
 Tests for PEAR::%{_pearname}.
