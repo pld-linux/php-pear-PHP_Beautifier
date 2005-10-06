@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - beautifier for PHP
 Summary(pl):	%{_pearname} - upiêkszacz dla PHP
 Name:		php-pear-%{_pearname}
-Version:	0.1.4
-Release:	2
+Version:	0.1.7
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	0d51b0036e6f61df1e80fd1335a41308
+# Source0-md5:	6c37f96c8738b979c470b166e90151e6
 Patch0:		%{name}-path_fix.patch
 URL:		http://pear.php.net/package/PHP_Beautifier/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
