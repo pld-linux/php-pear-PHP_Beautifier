@@ -16,6 +16,7 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	6c37f96c8738b979c470b166e90151e6
 Patch0:		%{name}-path_fix.patch
 URL:		http://pear.php.net/package/PHP_Beautifier/
+BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-bzip2
 Requires:	php-common >= 3:5
