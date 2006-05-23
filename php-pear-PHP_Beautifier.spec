@@ -18,6 +18,7 @@ Patch0:		%{name}-path_fix.patch
 URL:		http://pear.php.net/package/PHP_Beautifier/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-bzip2
 Requires:	php-common >= 3:5
 Requires:	php-pear >= 4:1.0-7
