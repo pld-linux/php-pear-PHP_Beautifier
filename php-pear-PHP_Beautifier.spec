@@ -7,13 +7,13 @@
 Summary:	%{_pearname} - beautifier for PHP
 Summary(pl):	%{_pearname} - upiêkszacz dla PHP
 Name:		php-pear-%{_pearname}
-Version:	0.1.8
+Version:	0.1.10
 Release:	1
 Epoch:		0
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	8ea550036a3c06d713972454ccede19b
+# Source0-md5:	94d974648bb2b0c60ec0b4b20edacf65
 Patch0:		%{name}-path_fix.patch
 URL:		http://pear.php.net/package/PHP_Beautifier/
 BuildRequires:	php-pear-PEAR
@@ -26,6 +26,9 @@ Requires:	php-pear-Log >= 1.8
 Requires:	php-tokenizer
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# exclude optional dependencies
+%define		_noautoreq	'pear(Console/Getopt.*)' 'pear(Archive/Tar.*)'
 
 %description
 This program reformat and beautify PHP source code files
@@ -66,6 +69,11 @@ cp -a ./%{_bindir}/* $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+if [ -f %{_docdir}/%{name}-%{version}/optional-packages.txt ]; then
+	cat %{_docdir}/%{name}-%{version}/optional-packages.txt
+fi
 
 %files
 %defattr(644,root,root,755)
