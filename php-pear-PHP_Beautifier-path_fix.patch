@@ -1,106 +1,35 @@
---- ./PHP/Beautifier.php~	2005-10-06 21:08:51.000000000 +0300
-+++ ./PHP/Beautifier.php	2005-10-06 21:13:02.000000000 +0300
+--- PHP_Beautifier-0.1.11/usr/share/pear/PHP/Beautifier.php~	2007-01-19 13:18:00.190033925 +0200
++++ PHP_Beautifier-0.1.11/usr/share/pear/PHP/Beautifier.php	2007-01-19 13:20:39.363592430 +0200
 @@ -27,15 +27,15 @@
  /**
- * Require PHP_Beautifier_Filter
- */
+  * Require PHP_Beautifier_Filter
+  */
 -include_once ('Beautifier/Filter.php');
 +include_once ('PHP/Beautifier/Filter.php');
  /**
- * Require PHP_Beautifier_Filter_Default
- */
+  * Require PHP_Beautifier_Filter_Default
+  */
 -include_once ('Beautifier/Filter/Default.filter.php');
 +include_once ('PHP/Beautifier/Filter/Default.filter.php');
  /**
- * Require PHP_Beautifier_Common
- */
+  * Require PHP_Beautifier_Common
+  */
 -include_once ('Beautifier/Common.php');
 +include_once ('PHP/Beautifier/Common.php');
  /**
- * Require Log
- */
+  * Require Log
+  */
 @@ -43,11 +43,11 @@
  /**
- * Require Exceptions
- */
+  * Require Exceptions
+  */
 -include_once ('Beautifier/Exception.php');
 +include_once ('PHP/Beautifier/Exception.php');
  /**
- * Require StreamWrapper
- */
+  * Require StreamWrapper
+  */
 -include_once ('Beautifier/StreamWrapper.php');
 +include_once ('PHP/Beautifier/StreamWrapper.php');
  /**
- * PHP_Beautifier
- *
---- ./PHP/Beautifier/StreamWrapper.php~	2005-10-06 21:14:23.000000000 +0300
-+++ ./PHP/Beautifier/StreamWrapper.php	2005-10-06 21:14:50.000000000 +0300
-@@ -49,5 +49,5 @@
-     function dir_rewinddir();
-     function dir_closedir();
- }
--require_once ('StreamWrapper/Tarz.php');
--?>
-\ No newline at end of file
-+require_once ('PHP/Beautifier/StreamWrapper/Tarz.php');
-+?>
---- ./PHP/Beautifier/Batch.php~	2005-10-06 21:15:56.000000000 +0300
-+++ ./PHP/Beautifier/Batch.php	2005-10-06 21:16:39.000000000 +0300
-@@ -23,11 +23,11 @@
- /**
- * Require PHP_Beautifier_Decorator
- */
--require_once ('Decorator.php');
-+require_once ('PHP/Beautifier/Decorator.php');
- /**
- * Require PHP_Beautifier_Batch_Output
- */
--require_once ('Batch/Output.php');
-+require_once ('PHP/Beautifier/Batch/Output.php');
- // ArrayNested->off();
- // ArrayNested->on();
- 
---- ./PHP/Beautifier/Batch/Output/FilesGz.php~	2005-10-06 21:36:42.000000000 +0300
-+++ ./PHP/Beautifier/Batch/Output/FilesGz.php	2005-10-06 21:37:17.000000000 +0300
-@@ -23,7 +23,7 @@
- /**
- * Include PHP_Beautifier_Batch_FilesGz
- */
--require_once 'FilesTar.php';
-+require_once 'PHP/Beautifier/Batch/Output/FilesTar.php';
- /**
- * Handle the batch process for one/multiple php files to one tar gzip file
- *
---- ../PHP/Beautifier/Batch/Output/FilesBz2.php~	2005-10-06 21:38:09.000000000 +0300
-+++ ../PHP/Beautifier/Batch/Output/FilesBz2.php	2005-10-06 21:38:30.000000000 +0300
-@@ -23,7 +23,7 @@
- /**
- * Include PHP_Beautifier_Batch_FilesGz
- */
--require_once 'FilesTar.php';
-+require_once 'PHP/Beautifier/Batch/Output/FilesTar.php';
- /**
- * Handle the batch process for one/multiple php files to one tar bzip2 file
- *
---- ../PHP/Beautifier/Batch/Output/DirectoryGz.php~	2005-10-06 21:38:55.000000000 +0300
-+++ ../PHP/Beautifier/Batch/Output/DirectoryGz.php	2005-10-06 21:39:10.000000000 +0300
-@@ -23,7 +23,7 @@
- /**
- * Include PHP_Beautifier_Batch_DirectoryTar
- */
--require_once ('DirectoryTar.php');
-+require_once ('PHP/Beautifier/Batch/Output/DirectoryTar.php');
- /**
- * PHP_Beautifier_Batch_FilesGz
- *
---- ../PHP/Beautifier/Batch/Output/DirectoryBz2.php~	2005-10-06 21:39:31.000000000 +0300
-+++ ../PHP/Beautifier/Batch/Output/DirectoryBz2.php	2005-10-06 21:39:44.000000000 +0300
-@@ -23,7 +23,7 @@
- /**
- * Include PHP_Beautifier_Batch_DirectoryTar
- */
--require_once ('DirectoryTar.php');
-+require_once ('PHP/Beautifier/Batch/Output/DirectoryTar.php');
- /**
- * PHP_Beautifier_Batch_FilesGz
- *
+  * PHP_Beautifier
+  *
