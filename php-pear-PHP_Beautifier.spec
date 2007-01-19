@@ -7,13 +7,13 @@
 Summary:	%{_pearname} - beautifier for PHP
 Summary(pl):	%{_pearname} - upiêkszacz dla PHP
 Name:		php-pear-%{_pearname}
-Version:	0.1.10
-Release:	3
+Version:	0.1.11
+Release:	1
 Epoch:		0
-License:	PHP 2.02
+License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	94d974648bb2b0c60ec0b4b20edacf65
+# Source0-md5:	4903b1dd1752b35010bdc19b3d81a584
 Patch0:		%{name}-path_fix.patch
 URL:		http://pear.php.net/package/PHP_Beautifier/
 BuildRequires:	php-pear-PEAR
@@ -57,8 +57,7 @@ Testy dla PEAR::%{_pearname}.
 
 %prep
 %pear_package_setup
-cd ./%{php_pear_dir}/%{_class}
-%patch0 -p2
+%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
