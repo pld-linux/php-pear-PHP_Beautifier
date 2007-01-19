@@ -33,3 +33,74 @@
  /**
   * PHP_Beautifier
   *
+--- PHP_Beautifier-0.1.11/usr/share/pear/PHP/Beautifier/Batch.php~	2007-01-19 13:21:45.095062133 +0200
++++ PHP_Beautifier-0.1.11/usr/share/pear/PHP/Beautifier/Batch.php	2007-01-19 13:51:20.504735118 +0200
+@@ -23,11 +23,11 @@
+ /**
+ * Require PHP_Beautifier_Decorator
+ */
+-require_once ('Decorator.php');
++require_once ('PHP/Beautifier/Decorator.php');
+ /**
+ * Require PHP_Beautifier_Batch_Output
+ */
+-require_once ('Batch/Output.php');
++require_once ('PHP/Beautifier/Batch/Output.php');
+ // ArrayNested->off();
+ // ArrayNested->on();
+ 
+--- PHP_Beautifier-0.1.11/usr/share/pear/PHP/Beautifier/Batch/Output/DirectoryBz2.php~	2007-01-19 13:52:05.935751365 +0200
++++ PHP_Beautifier-0.1.11/usr/share/pear/PHP/Beautifier/Batch/Output/DirectoryBz2.php	2007-01-19 13:52:47.166673703 +0200
+@@ -23,7 +23,7 @@
+ /**
+ * Include PHP_Beautifier_Batch_DirectoryTar
+ */
+-require_once ('DirectoryTar.php');
++require_once ('PHP/Beautifier/Batch/Output/DirectoryTar.php');
+ /**
+ * PHP_Beautifier_Batch_FilesGz
+ *
+--- PHP_Beautifier-0.1.11/usr/share/pear/PHP/Beautifier/Batch/Output/DirectoryGz.php~	2007-01-19 13:53:11.797224709 +0200
++++ PHP_Beautifier-0.1.11/usr/share/pear/PHP/Beautifier/Batch/Output/DirectoryGz.php	2007-01-19 13:53:50.188083573 +0200
+@@ -23,7 +23,7 @@
+ /**
+ * Include PHP_Beautifier_Batch_DirectoryTar
+ */
+-require_once ('DirectoryTar.php');
++require_once ('PHP/Beautifier/Batch/Output/DirectoryTar.php');
+ /**
+ * PHP_Beautifier_Batch_FilesGz
+ *
+--- PHP_Beautifier-0.1.11/usr/share/pear/PHP/Beautifier/Batch/Output/FilesBz2.php~	2007-01-19 13:53:11.797224709 +0200
++++ PHP_Beautifier-0.1.11/usr/share/pear/PHP/Beautifier/Batch/Output/FilesBz2.php	2007-01-19 13:54:40.409207150 +0200
+@@ -23,7 +23,7 @@
+ /**
+ * Include PHP_Beautifier_Batch_FilesGz
+ */
+-require_once 'FilesTar.php';
++require_once 'PHP/Beautifier/Batch/Output/FilesTar.php';
+ /**
+ * Handle the batch process for one/multiple php files to one tar bzip2 file
+ *
+--- PHP_Beautifier-0.1.11/usr/share/pear/PHP/Beautifier/Batch/Output/FilesGz.php~	2007-01-19 13:53:11.797224709 +0200
++++ PHP_Beautifier-0.1.11/usr/share/pear/PHP/Beautifier/Batch/Output/FilesGz.php	2007-01-19 13:55:07.499813262 +0200
+@@ -23,7 +23,7 @@
+ /**
+ * Include PHP_Beautifier_Batch_FilesGz
+ */
+-require_once 'FilesTar.php';
++require_once 'PHP/Beautifier/Batch/Output/FilesTar.php';
+ /**
+ * Handle the batch process for one/multiple php files to one tar gzip file
+ *
+--- PHP_Beautifier-0.1.11/usr/share/pear/PHP/Beautifier/StreamWrapper.php~	2007-01-19 13:53:11.807224933 +0200
++++ PHP_Beautifier-0.1.11/usr/share/pear/PHP/Beautifier/StreamWrapper.php	2007-01-19 13:55:42.550597495 +0200
+@@ -49,5 +49,5 @@
+     function dir_rewinddir();
+     function dir_closedir();
+ }
+-require_once ('StreamWrapper/Tarz.php');
+-?>
+\ No newline at end of file
++require_once ('PHP/Beautifier/StreamWrapper/Tarz.php');
++?>
