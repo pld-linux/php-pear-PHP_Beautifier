@@ -3,12 +3,11 @@
 %define		_subclass	Beautifier
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
-
 Summary:	%{_pearname} - beautifier for PHP
 Summary(pl):	%{_pearname} - upiêkszacz dla PHP
 Name:		php-pear-%{_pearname}
 Version:	0.1.11
-Release:	1
+Release:	2
 Epoch:		0
 License:	PHP 3.0
 Group:		Development/Languages/PHP
