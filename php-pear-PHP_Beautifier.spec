@@ -4,7 +4,7 @@
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_pearname} - beautifier for PHP
-Summary(pl):	%{_pearname} - upiêkszacz dla PHP
+Summary(pl.UTF-8):   %{_pearname} - upiÄ™kszacz dla PHP
 Name:		php-pear-%{_pearname}
 Version:	0.1.11
 Release:	2
@@ -34,15 +34,15 @@ automatically.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Ten program automatycznie przeformatuje i upiêkszy kod ¼ród³owy
+%description -l pl.UTF-8
+Ten program automatycznie przeformatuje i upiÄ™kszy kod ÅºrÃ³dÅ‚owy
 aplikacji napisanych w PHP.
 
 Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no
@@ -51,7 +51,7 @@ AutoProv:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep
