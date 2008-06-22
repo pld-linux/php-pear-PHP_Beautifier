@@ -4,17 +4,17 @@
  /**
   * Require PHP_Beautifier_Filter
   */
--include_once ('Beautifier/Filter.php');
+-include_once 'Beautifier/Filter.php';
 +include_once ('PHP/Beautifier/Filter.php');
  /**
   * Require PHP_Beautifier_Filter_Default
   */
--include_once ('Beautifier/Filter/Default.filter.php');
+-include_once 'Beautifier/Filter/Default.filter.php';
 +include_once ('PHP/Beautifier/Filter/Default.filter.php');
  /**
   * Require PHP_Beautifier_Common
   */
--include_once ('Beautifier/Common.php');
+-include_once 'Beautifier/Common.php';
 +include_once ('PHP/Beautifier/Common.php');
  /**
   * Require Log
@@ -23,12 +23,12 @@
  /**
   * Require Exceptions
   */
--include_once ('Beautifier/Exception.php');
+-include_once 'Beautifier/Exception.php';
 +include_once ('PHP/Beautifier/Exception.php');
  /**
   * Require StreamWrapper
   */
--include_once ('Beautifier/StreamWrapper.php');
+-include_once 'Beautifier/StreamWrapper.php';
 +include_once ('PHP/Beautifier/StreamWrapper.php');
  /**
   * PHP_Beautifier
@@ -39,12 +39,12 @@
  /**
  * Require PHP_Beautifier_Decorator
  */
--require_once ('Decorator.php');
+-require_once 'Decorator.php';
 +require_once ('PHP/Beautifier/Decorator.php');
  /**
  * Require PHP_Beautifier_Batch_Output
  */
--require_once ('Batch/Output.php');
+-require_once 'Batch/Output.php';
 +require_once ('PHP/Beautifier/Batch/Output.php');
  // ArrayNested->off();
  // ArrayNested->on();

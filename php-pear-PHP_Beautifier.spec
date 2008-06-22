@@ -6,13 +6,13 @@
 Summary:	%{_pearname} - beautifier for PHP
 Summary(pl.UTF-8):	%{_pearname} - upiększacz dla PHP
 Name:		php-pear-%{_pearname}
-Version:	0.1.11
-Release:	3
+Version:	0.1.14
+Release:	1
 Epoch:		0
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	4903b1dd1752b35010bdc19b3d81a584
+# Source0-md5:	588e9645a6e885dcb382a9f255652333
 Patch0:		%{name}-path_fix.patch
 URL:		http://pear.php.net/package/PHP_Beautifier/
 BuildRequires:	php-pear-PEAR
