@@ -58,11 +58,15 @@ Testy dla PEAR::%{_pearname}.
 %pear_package_setup
 %patch0 -p1
 
+mv docs/%{_pearname}/examples .
+rm ./%{_bindir}/php_beautifier.bat
+
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{php_pear_dir},%{_bindir}}
+install -d $RPM_BUILD_ROOT{%{php_pear_dir},%{_bindir},%{_examplesdir}/%{name}-%{version}}
 %pear_package_install
-cp -a ./%{_bindir}/* $RPM_BUILD_ROOT%{_bindir}
+install -p ./%{_bindir}/* $RPM_BUILD_ROOT%{_bindir}
+cp -a examples/*  $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -75,13 +79,14 @@ fi
 %files
 %defattr(644,root,root,755)
 %doc install.log optional-packages.txt
-%doc docs/%{_pearname}/examples
 %{php_pear_dir}/.registry/*.reg
 %attr(755,root,root) %{_bindir}/php_beautifier
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}
 
 %{php_pear_dir}/data/%{_pearname}
+
+%{_examplesdir}/%{name}-%{version}
 
 %files tests
 %defattr(644,root,root,755)
