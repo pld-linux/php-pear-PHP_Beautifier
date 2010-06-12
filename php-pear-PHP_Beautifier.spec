@@ -1,18 +1,18 @@
+%define		class		PHP
+%define		subclass	Beautifier
+%define		status		beta
+%define		_pearname	%{class}_%{subclass}
 %include	/usr/lib/rpm/macros.php
-%define		_class		PHP
-%define		_subclass	Beautifier
-%define		_status		beta
-%define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_pearname} - beautifier for PHP
 Summary(pl.UTF-8):	%{_pearname} - upiększacz dla PHP
 Name:		php-pear-%{_pearname}
-Version:	0.1.14
+Version:	0.1.15
 Release:	1
 Epoch:		0
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	588e9645a6e885dcb382a9f255652333
+# Source0-md5:	43aaf77521c5efb353bd7d46d20fe158
 Patch0:		%{name}-path_fix.patch
 URL:		http://pear.php.net/package/PHP_Beautifier/
 BuildRequires:	php-pear-PEAR
@@ -32,13 +32,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This program reformat and beautify PHP source code files
 automatically.
 
-In PEAR status of this package is: %{_status}.
+In PEAR status of this package is: %{status}.
 
 %description -l pl.UTF-8
 Ten program automatycznie przeformatuje i upiększy kod źródłowy
 aplikacji napisanych w PHP.
 
-Ta klasa ma w PEAR status: %{_status}.
+Ta klasa ma w PEAR status: %{status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
@@ -81,8 +81,8 @@ fi
 %doc install.log optional-packages.txt
 %{php_pear_dir}/.registry/*.reg
 %attr(755,root,root) %{_bindir}/php_beautifier
-%{php_pear_dir}/%{_class}/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}
+%{php_pear_dir}/%{class}/*.php
+%{php_pear_dir}/%{class}/%{subclass}
 
 %{php_pear_dir}/data/%{_pearname}
 
