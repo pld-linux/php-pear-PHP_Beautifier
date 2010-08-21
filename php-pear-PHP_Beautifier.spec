@@ -7,7 +7,7 @@ Summary:	%{_pearname} - beautifier for PHP
 Summary(pl.UTF-8):	%{_pearname} - upiększacz dla PHP
 Name:		php-pear-%{_pearname}
 Version:	0.1.15
-Release:	1
+Release:	2
 Epoch:		0
 License:	PHP 3.0
 Group:		Development/Languages/PHP
@@ -15,18 +15,22 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	43aaf77521c5efb353bd7d46d20fe158
 Patch0:		%{name}-path_fix.patch
 URL:		http://pear.php.net/package/PHP_Beautifier/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	php(tokenizer)
 Requires:	php-common >= 3:5
 Requires:	php-pear >= 4:1.0-7
 Requires:	php-pear-Log >= 1.8
+Requires:	php-tokenizer
+Suggests:	php-bz2
+Suggests:	php-pear-Archive_Tar
+Suggests:	php-pear-Console_Getopt
+Suggests:	php-pear-PHP_DocBlockGenerator
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # exclude optional dependencies
-%define		_noautoreq	'pear(Console/Getopt.*)' 'pear(Archive/Tar.*)'
+%define		_noautoreq	'pear(Console/Getopt.*)' 'pear(Archive/Tar.*)' pear(PHP/DocBlockGenerator.*)
 
 %description
 This program reformat and beautify PHP source code files
@@ -45,8 +49,8 @@ Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
-AutoReq:	no
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
