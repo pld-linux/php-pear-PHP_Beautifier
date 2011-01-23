@@ -26,6 +26,7 @@ Suggests:	php-bz2
 Suggests:	php-pear-Archive_Tar
 Suggests:	php-pear-Console_Getopt
 Suggests:	php-pear-PHP_DocBlockGenerator
+Obsoletes:	php-pear-PHP_Beautifier-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -43,20 +44,6 @@ Ten program automatycznie przeformatuje i upiększy kod źródłowy
 aplikacji napisanych w PHP.
 
 Ta klasa ma w PEAR status: %{status}.
-
-%package tests
-Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
-Group:		Development/Languages/PHP
-Requires:	%{name} = %{epoch}:%{version}-%{release}
-AutoProv:	no
-AutoReq:	no
-
-%description tests
-Tests for PEAR::%{_pearname}.
-
-%description tests -l pl.UTF-8
-Testy dla PEAR::%{_pearname}.
 
 %prep
 %pear_package_setup
@@ -91,7 +78,3 @@ fi
 %{php_pear_dir}/data/%{_pearname}
 
 %{_examplesdir}/%{name}-%{version}
-
-%files tests
-%defattr(644,root,root,755)
-%{php_pear_dir}/tests/*
