@@ -7,7 +7,7 @@ Summary:	%{_pearname} - beautifier for PHP
 Summary(pl.UTF-8):	%{_pearname} - upiększacz dla PHP
 Name:		php-pear-%{_pearname}
 Version:	0.1.15
-Release:	2
+Release:	3
 Epoch:		0
 License:	PHP 3.0
 Group:		Development/Languages/PHP
