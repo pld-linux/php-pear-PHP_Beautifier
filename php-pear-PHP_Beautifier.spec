@@ -7,7 +7,7 @@ Summary:	%{_pearname} - beautifier for PHP
 Summary(pl.UTF-8):	%{_pearname} - upiększacz dla PHP
 Name:		php-pear-%{_pearname}
 Version:	0.1.15
-Release:	3
+Release:	4
 Epoch:		0
 License:	PHP 3.0
 Group:		Development/Languages/PHP
@@ -18,10 +18,10 @@ URL:		http://pear.php.net/package/PHP_Beautifier/
 BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
+Requires:	php(tokenizer)
 Requires:	php-common >= 3:5
 Requires:	php-pear >= 4:1.0-7
 Requires:	php-pear-Log >= 1.8
-Requires:	php-tokenizer
 Suggests:	php-bz2
 Suggests:	php-pear-Archive_Tar
 Suggests:	php-pear-Console_Getopt
