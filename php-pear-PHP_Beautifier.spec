@@ -28,7 +28,7 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # exclude optional dependencies
-%define		_noautoreq	'pear(Console/Getopt.*)' 'pear(Archive/Tar.*)' pear(PHP/DocBlockGenerator.*)
+%define		_noautoreq_pear Console/Getopt.* Archive/Tar.* PHP/DocBlockGenerator.*
 
 %description
 This program reformat and beautify PHP source code files
