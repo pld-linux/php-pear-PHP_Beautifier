@@ -1,23 +1,21 @@
-%define		class		PHP
-%define		subclass	Beautifier
 %define		status		beta
-%define		_pearname	%{class}_%{subclass}
+%define		pearname	PHP_Beautifier
 %include	/usr/lib/rpm/macros.php
-Summary:	%{_pearname} - beautifier for PHP
-Summary(pl.UTF-8):	%{_pearname} - upiększacz dla PHP
-Name:		php-pear-%{_pearname}
+Summary:	%{pearname} - beautifier for PHP
+Summary(pl.UTF-8):	%{pearname} - upiększacz dla PHP
+Name:		php-pear-%{pearname}
 Version:	0.1.15
 Release:	5
 Epoch:		0
 License:	PHP 3.0
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
 # Source0-md5:	43aaf77521c5efb353bd7d46d20fe158
 Patch0:		%{name}-path_fix.patch
 URL:		http://pear.php.net/package/PHP_Beautifier/
 BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.654
 Requires:	php(core) >= 5
 Requires:	php(tokenizer)
 Requires:	php-pear >= 4:1.0-7
@@ -49,7 +47,7 @@ Ta klasa ma w PEAR status: %{status}.
 %pear_package_setup
 %patch0 -p1
 
-mv docs/%{_pearname}/examples .
+mv docs/%{pearname}/examples .
 rm ./%{_bindir}/php_beautifier.bat
 
 %install
@@ -72,9 +70,9 @@ fi
 %doc install.log optional-packages.txt
 %{php_pear_dir}/.registry/*.reg
 %attr(755,root,root) %{_bindir}/php_beautifier
-%{php_pear_dir}/%{class}/*.php
-%{php_pear_dir}/%{class}/%{subclass}
+%{php_pear_dir}/PHP/*.php
+%{php_pear_dir}/PHP/Beautifier
 
-%{php_pear_dir}/data/%{_pearname}
+%{php_pear_dir}/data/%{pearname}
 
 %{_examplesdir}/%{name}-%{version}
