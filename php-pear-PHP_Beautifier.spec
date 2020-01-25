@@ -1,6 +1,5 @@
 %define		status		beta
 %define		pearname	PHP_Beautifier
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - beautifier for PHP
 Summary(pl.UTF-8):	%{pearname} - upiększacz dla PHP
 Name:		php-pear-%{pearname}
