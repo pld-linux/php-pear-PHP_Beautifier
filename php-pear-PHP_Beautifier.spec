@@ -43,7 +43,7 @@ Ta klasa ma w PEAR status: %{status}.
 
 %prep
 %pear_package_setup
-%patch0 -p1
+%patch -P0 -p1
 
 mv docs/%{pearname}/examples .
 rm ./%{_bindir}/php_beautifier.bat
